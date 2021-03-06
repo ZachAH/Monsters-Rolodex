@@ -7,7 +7,8 @@ class App extends Component {
     super();
 
     this.state = {
-      monsters: []
+      monsters: [],
+      searchField:''
     };
   }
   //fetching api then converting it to json and then setting it as the monster array for users
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        <input type='search' placeholder='search monsters' onChange={e => console.log}/>
         <CardList monsters={this.state.monsters}/>
       </div>
     );
